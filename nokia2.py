@@ -1,5 +1,5 @@
 def nokia():
-prompt = """\tList of menu functions
+	prompt = """\tList of menu functions
 
 	1 -> Phone book
 	2 -> Messages
@@ -15,63 +15,63 @@ prompt = """\tList of menu functions
 	12 -> profiles
 	13 -> Sim services"""
 
-print(prompt)
+	print(prompt)
 
-menu = int(input("Press number: "))
-match menu:
-	case 1:	
-		phonebookp = """\t\tPhoneboook
+	menu = int(input("Press number: "))
+	match menu:
+		case 1:	
+			phonebookp = """\t\tPhoneboook
 
-		1 -> Search
-		2 -> Services Nos
-		3 -> Add name
-		4 -> Erase
-		5 -> Edit
-		6 -> Assign Tone
-		7 -> Send b'card
-		8 -> Options
-		9 -> Speed dials
-		10 -> Voice tags
-		0 -> back"""	
-		print(phonebookp)
+			1 -> Search
+			2 -> Services Nos
+			3 -> Add name
+			4 -> Erase
+			5 -> Edit
+			6 -> Assign Tone
+			7 -> Send b'card
+			8 -> Options
+			9 -> Speed dials
+			10 -> Voice tags
+			0 -> back"""	
+			print(phonebookp)
 		
-		phonebook = int(input("Press number: "))
-		match phonebook:
-			case 1:
-				print("Search")
-			case 2:
-				print("Service Nos")
-			case 3:
-				print("Add name")
-			case 4:
-				print("Erase")
-			case 5:
-				print("Edit")
-			case 6:
-				print("Assign tone")
-			case 7:
-				print("Send b'card")
-			case 8:
-				optionsp = """\t\t\toptions
-			1. Type of view
-			2. Memory status
-			0. Back"""
-				print(optionsp)
+			phonebook = int(input("Press number: "))
+			match phonebook:
+				case 1:
+					print("Search")
+				case 2:
+					print("Service Nos")
+				case 3:
+					print("Add name")
+				case 4:
+					print("Erase")
+				case 5:
+					print("Edit")
+				case 6:
+					print("Assign tone")
+				case 7:
+					print("Send b'card")
+				case 8:
+					optionsp = """\t\t\toptions
+					1. Type of view
+					2. Memory status
+					0. Back"""
+					print(optionsp)
 		
-				options = int(input("Press number: "))
-				match options:
+					options = int(input("Press number: "))
+					match options:
 					case 1:
 						print("Type of view")
 					case 2:
 						print("Memory status")
 					case 0:
 						print(prompt)
-			case 9:
-				print("Speed dials")
-			case 10:
-				print("Voice tags")
-			case 0:
-				print(prompt)
+				case 9:
+					print("Speed dials")
+				case 10:
+					print("Voice tags")
+				case 0:
+					print(prompt)
 
 	case 2:
 		messagesP = """
@@ -491,13 +491,13 @@ match menu:
 					case 2:
 						print("Memory status")
 					case 0:
-						print(prompt)
+						def nokia()
 			case 9:
 				print("Speed dials")
 			case 10:
 				print("Voice tags")
 			case 0:
-				print(prompt)
+				def nokia()
 
 	case 2:
 		messagesP = """
@@ -820,14 +820,3 @@ match menu:
 		print("Profile")
 	case 13:
 		print("Sim services")
-		
-									
-					
-										
-	
-				
-						
-						
-				
-
-			
