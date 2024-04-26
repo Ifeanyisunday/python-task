@@ -1,4 +1,4 @@
-def cal_length(name):
+def callength(name):
 	return len(name)
-print(cal_length("semicolon"))
+print(callength("semicolon"))
 	

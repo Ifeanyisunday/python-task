@@ -1,7 +1,10 @@
 def words(namelist):
-	largest = 0
-	list = []
-	for i in range(7):
-		list[i] = len(namelist[i])
-	return list
+	longest = 0
+	longest_word = ""
+	for i in namelist:
+		if len(i) > longest:
+			longest = len(i)
+			longest_word = i
+			
+	return longest_word, longest
 print(words(['welcome', 'out', 'weather', 'mobile', 'breakfast', 'journey']))

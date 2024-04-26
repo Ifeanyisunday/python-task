@@ -5,4 +5,4 @@ def character(name):
 			return name + "ly"
 		else:
 			return name + "ing" 
-print(character("semicolon"))
+print(character("semicoloning"))
