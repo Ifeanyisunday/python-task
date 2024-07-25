@@ -2,14 +2,15 @@ from atm_app.accountclass import Account
 
 
 class BankAccount:
+
     def __init__(self):
-        self.no_of_customers = 0
         self.accounts = []
+        self.no_of_customers = 0
 
     def add_account(self, name, pin):
-        account_instance = Account(name, pin, self.generate_acct_no())
-        self.accounts.append(account_instance)
         self.no_of_customers += 1
+        account_instance = Account(name, pin, self.no_of_customers)
+        self.accounts.append(account_instance)
 
     def get_no_of_customers(self):
         return self.no_of_customers
@@ -19,6 +20,13 @@ class BankAccount:
 
     def bank_deposit(self, acct_no, amount):
         self.find_account(acct_no).deposit(amount)
+
+    def bank_withdraw(self, acct_no, amount):
+        self.find_account(acct_no).withdraw(amount)
+
+    def bank_transfer(self, sender_acct, receiver_acct, amount):
+        self.find_account(sender_acct).withdraw(amount)
+        self.find_account(receiver_acct).deposit(amount)
 
     def check_bank_balance(self, acct_no):
         get_account_balance = self.find_account(acct_no)
@@ -30,5 +38,4 @@ class BankAccount:
             if account_is_found:
                 return account
 
-    def __str__(self):
-        return f"{self.no_of_customers} {len(self.accounts)}"
+

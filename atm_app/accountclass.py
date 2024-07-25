@@ -18,7 +18,7 @@ class Account:
         if amount > 0:
             self.balance += amount
 
-    def withdraw(self, amount, pin):
+    def withdraw(self, amount):
         if amount < self.balance:
             self.balance = self.balance - amount
 
@@ -26,5 +26,5 @@ class Account:
         return self.balance
 
     def __str__(self):
-        return f"{self.account_name} {self.account_number} {self.balance}"
+        return f"{self.account_name} {self.balance}"
 
